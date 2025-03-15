@@ -1,0 +1,135 @@
+$primary-color: #D3CE31; // Updated primary color (bottom color)
+$secondary-color: #353535; // Updated secondary color (top dark gray)
+$accent-color: #ff3b30;
+$text-color: #fff;
+
+body {
+  
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #353535 50%, #D3CE31 50%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  
+}
+
+.hero {
+  color: $text-color;
+  text-align: center;
+  padding: 100px 20px;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    .btn-primary, .btn-secondary {
+      background-color: $accent-color;
+      color: $text-color;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      border: 2px solid $text-color;
+    }
+  }
+}
+
+.solutions {
+  background: none; // Remove individual background to let the global one work
+  color: $text-color;
+  padding: 50px;
+  text-align: center;
+
+  .solution-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .card {
+      background: $text-color;
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+
+      img {
+        width: 50px;
+      }
+
+      h3 {
+        margin-top: 10px;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.about {
+  padding: 50px;
+  text-align: center;
+
+  .video-container {
+    height: 200px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .play-btn {
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      font-size: 2rem;
+      padding: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}
+
+.contact {
+  background: transparent; // Use the global gradient
+  padding: 50px;
+  text-align: center;
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+
+    input, textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid $secondary-color;
+    }
+
+    button {
+      background-color: $secondary-color;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: $secondary-color;
+  color: $text-color;
+}
